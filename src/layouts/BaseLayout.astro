@@ -11,7 +11,7 @@ interface Props {
 }
 
 const { title, description, path, faqJsonLd = null } = Astro.props;
-const canonical = new URL(path, "https://larsvoelkle.de").toString();
+const canonical = new URL(path, "https://www.larsvoelkle.de").toString();
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
@@ -19,7 +19,7 @@ const localBusinessJsonLd = {
   name: "Lars Völkle — Systemisches Coaching",
   description:
     "Systemisches Coaching nach Burnout, für Führungskräfte und für Männer. Vor Ort in Wehingen und online weltweit. Beratung auf Deutsch, Französisch und Italienisch.",
-  url: "https://larsvoelkle.de/",
+  url: "https://www.larsvoelkle.de/",
   telephone: "+4974260000000",
   email: "post@larsvoelkle.de",
   address: {
