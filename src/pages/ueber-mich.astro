@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { About } from "../components/pages/About.jsx";
+---
+
+<BaseLayout
+  title="Über mich | Lars Völkle — Systemischer Coach in Wehingen"
+  description="Lars Völkle, systemischer Coach in Wehingen bei Tuttlingen. Coaching nach Burnout, für Führungskräfte und für Männer — auf Deutsch, Französisch und Italienisch."
+  path="/ueber-mich"
+>
+  <About client:load />
+</BaseLayout>

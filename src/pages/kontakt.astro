@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Contact } from "../components/pages/Contact.jsx";
+---
+
+<BaseLayout
+  title="Kontakt | Lars Völkle — Systemischer Coach in Wehingen"
+  description="Erstgespräch oder Termin anfragen: Coaching in Wehingen bei Tuttlingen oder online, auf Deutsch, Französisch oder Italienisch. Antwort innerhalb von zwei Werktagen."
+  path="/kontakt"
+>
+  <Contact client:load />
+</BaseLayout>

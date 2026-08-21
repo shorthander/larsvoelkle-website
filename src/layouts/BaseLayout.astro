@@ -1,0 +1,84 @@
+---
+import "../styles/global.css";
+import { SiteHeader } from "../components/site/SiteHeader.jsx";
+import { SiteFooter } from "../components/site/SiteFooter.jsx";
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  faqJsonLd?: object | null;
+}
+
+const { title, description, path, faqJsonLd = null } = Astro.props;
+const canonical = new URL(path, "https://larsvoelkle.de").toString();
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "ProfessionalService"],
+  name: "Lars Völkle — Systemisches Coaching",
+  description:
+    "Systemisches Coaching nach Burnout, für Führungskräfte und für Männer. Vor Ort in Wehingen und online weltweit. Beratung auf Deutsch, Französisch und Italienisch.",
+  url: "https://larsvoelkle.de/",
+  telephone: "+4974260000000",
+  email: "post@larsvoelkle.de",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Hintere Straße 18",
+    postalCode: "78564",
+    addressLocality: "Wehingen",
+    addressRegion: "Baden-Württemberg",
+    addressCountry: "DE",
+  },
+  availableLanguage: ["de", "fr", "it"],
+  knowsLanguage: ["de", "fr", "it"],
+  areaServed: [
+    { "@type": "City", name: "Wehingen" },
+    { "@type": "City", name: "Spaichingen" },
+    { "@type": "City", name: "Tuttlingen" },
+    { "@type": "City", name: "Balingen" },
+    { "@type": "City", name: "Rottweil" },
+    { "@type": "Country", name: "Deutschland" },
+  ],
+  serviceType: ["Systemisches Coaching", "Burnout-Coaching", "Führungskräfte-Coaching", "Online-Coaching"],
+  makesOffer: [
+    { "@type": "Offer", name: "Erstgespräch, 30 Minuten", price: "0", priceCurrency: "EUR" },
+    {
+      "@type": "Offer",
+      name: "Einzelsitzung, 45 Minuten",
+      priceSpecification: { "@type": "PriceSpecification", minPrice: "90", maxPrice: "150", priceCurrency: "EUR" },
+    },
+  ],
+};
+---
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="index,follow" />
+    <meta name="geo.region" content="DE-BW" />
+    <meta name="geo.placename" content="Wehingen, Landkreis Tuttlingen" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="og:locale:alternate" content="it_IT" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessJsonLd)} />
+    {faqJsonLd && <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />}
+  </head>
+  <body>
+    <SiteHeader pathname={path} client:load />
+    <div class="reveal">
+      <slot />
+    </div>
+    <SiteFooter client:load />
+  </body>
+</html>

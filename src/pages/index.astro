@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Home } from "../components/pages/Home.jsx";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Wie lange dauert eine Coaching-Sitzung?", acceptedAnswer: { "@type": "Answer", text: "45 Minuten. Das Erstgespräch dauert 30 Minuten und ist kostenfrei." } },
+    { "@type": "Question", name: "Was kostet ein Coaching-Termin?", acceptedAnswer: { "@type": "Answer", text: "Eine Einzelsitzung à 45 Minuten kostet zwischen 90 und 150 €. Wenn die Mittel fehlen, gibt es reduzierte Plätze und Ratenzahlung." } },
+    { "@type": "Question", name: "In welchen Sprachen ist Coaching möglich?", acceptedAnswer: { "@type": "Answer", text: "Deutsch, Französisch und Italienisch — alle drei auf Muttersprachniveau." } },
+    { "@type": "Question", name: "Gibt es Online-Coaching?", acceptedAnswer: { "@type": "Answer", text: "Ja, per Video weltweit — gleichwertig zum Termin vor Ort in Wehingen." } },
+  ],
+};
+---
+
+<BaseLayout
+  title="Systemisches Coaching Wehingen, Tuttlingen & online | Lars Völkle — auch auf Französisch & Italienisch"
+  description="Systemisches Coaching bei Lars Völkle in Wehingen — für Tuttlingen, Rottweil, Balingen und online weltweit. Nach Burnout, für Führungskräfte, für Männer. Sitzungen à 45 Minuten für 90–150 €, Erstgespräch kostenfrei, auf Deutsch, Französisch und Italienisch."
+  path="/"
+  faqJsonLd={faqJsonLd}
+>
+  <Home client:load />
+</BaseLayout>

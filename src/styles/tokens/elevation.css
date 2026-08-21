@@ -1,0 +1,13 @@
+:root{
+/* Shadows are warm-brown tinted, low-contrast, and diffuse — never neutral grey */
+--shadow-none:none;
+--shadow-xs:0 1px 2px color-mix(in oklab,var(--bark-900) 6%,transparent);
+--shadow-sm:0 1px 2px color-mix(in oklab,var(--bark-900) 5%,transparent),0 2px 8px color-mix(in oklab,var(--bark-900) 5%,transparent);
+--shadow-md:0 2px 4px color-mix(in oklab,var(--bark-900) 4%,transparent),0 8px 24px color-mix(in oklab,var(--bark-900) 8%,transparent);
+--shadow-lg:0 4px 8px color-mix(in oklab,var(--bark-900) 4%,transparent),0 18px 44px color-mix(in oklab,var(--bark-900) 10%,transparent);
+--shadow-inset-hairline:inset 0 0 0 1px color-mix(in oklab,var(--bark-900) 8%,transparent);
+--shadow-focus:0 0 0 3px color-mix(in oklab,var(--ember-500) 40%,transparent);
+/* Protection gradient for text over imagery */
+--scrim-bottom:linear-gradient(to top,color-mix(in oklab,var(--bark-950) 78%,transparent) 0%,color-mix(in oklab,var(--bark-950) 45%,transparent) 42%,transparent 100%);
+--scrim-full:linear-gradient(to right,color-mix(in oklab,var(--bark-950) 68%,transparent),color-mix(in oklab,var(--bark-950) 18%,transparent));
+}

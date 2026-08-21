@@ -1,0 +1,107 @@
+import React from "react";
+import { Wordmark } from "../core/Wordmark.jsx";
+import { Icon } from "../core/Icon.jsx";
+import { NAV } from "./SiteHeader.jsx";
+
+export function SiteFooter() {
+  return (
+    <footer
+      style={{
+        background: "var(--surface-inverse)",
+        color: "var(--text-inverse-muted)",
+        paddingTop: "var(--space-10)",
+        paddingBottom: "var(--space-6)",
+      }}
+    >
+      <div className="wrap foot">
+        <div>
+          <Wordmark size="md" tone="light" />
+          <p
+            style={{
+              marginTop: "var(--space-3)",
+              fontSize: "var(--size-small)",
+              color: "var(--text-inverse-muted)",
+              maxWidth: "36ch",
+            }}
+          >
+            Systemisches Coaching für Menschen im Umbruch und für Führungskräfte. In Wehingen und online — auf Deutsch, Französisch und Italienisch.
+          </p>
+          <p
+            style={{
+              marginTop: "var(--space-2)",
+              fontSize: "var(--size-caption)",
+              color: "var(--moss-200)",
+              maxWidth: "40ch",
+            }}
+          >
+            Tuttlingen · Rottweil · Wehingen · Balingen · Spaichingen · online weltweit
+          </p>
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-1)" }}>
+          <div
+            style={{
+              fontFamily: "var(--font-text)",
+              fontSize: "var(--size-eyebrow)",
+              letterSpacing: "var(--tracking-eyebrow)",
+              textTransform: "uppercase",
+              color: "var(--moss-300)",
+              marginBottom: "var(--space-1)",
+            }}
+          >
+            Seiten
+          </div>
+          {NAV.map(([href, label]) => (
+            <a key={href} href={href} style={{ color: "var(--paper)", fontSize: "var(--size-small)", textDecoration: "none" }}>
+              {label}
+            </a>
+          ))}
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-15)", fontSize: "var(--size-small)" }}>
+          <div
+            style={{
+              fontFamily: "var(--font-text)",
+              fontSize: "var(--size-eyebrow)",
+              letterSpacing: "var(--tracking-eyebrow)",
+              textTransform: "uppercase",
+              color: "var(--moss-300)",
+            }}
+          >
+            Kontakt
+          </div>
+          <span style={{ display: "flex", gap: "var(--space-1)", alignItems: "center", color: "var(--paper)" }}>
+            <Icon name="phone" size={16} /> 07426 000 000
+          </span>
+          <span style={{ display: "flex", gap: "var(--space-1)", alignItems: "center", color: "var(--paper)" }}>
+            <Icon name="mail" size={16} /> post@larsvoelkle.de
+          </span>
+          <span style={{ display: "flex", gap: "var(--space-1)", alignItems: "center" }}>
+            <Icon name="map-pin" size={16} /> Hintere Straße 18, 78564 Wehingen
+          </span>
+        </div>
+      </div>
+      <div
+        className="wrap"
+        style={{
+          marginTop: "var(--space-8)",
+          paddingTop: "var(--space-3)",
+          borderTop: "1px solid var(--border-inverse)",
+          display: "flex",
+          justifyContent: "space-between",
+          gap: "var(--space-3)",
+          flexWrap: "wrap",
+          fontSize: "var(--size-caption)",
+        }}
+      >
+        <span>© 2026 Lars Völkle</span>
+        <span style={{ display: "flex", gap: "var(--space-3)" }}>
+          <a href="#" style={{ color: "var(--moss-200)" }}>
+            Impressum
+          </a>
+          <a href="#" style={{ color: "var(--moss-200)" }}>
+            Datenschutz
+          </a>
+        </span>
+      </div>
+    </footer>
+  );
+}

@@ -1,0 +1,13 @@
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--surface-page);color:var(--text-body);font-family:var(--font-text);font-size:var(--size-body);line-height:var(--leading-body);font-weight:var(--weight-regular);-webkit-font-smoothing:antialiased;text-wrap:pretty}
+h1,h2,h3,h4{font-family:var(--font-display);color:var(--text-heading);font-weight:var(--weight-regular);letter-spacing:var(--tracking-heading);line-height:var(--leading-heading);margin:0 0 var(--space-2)}
+h1{font-size:var(--size-h1);line-height:var(--leading-display);letter-spacing:var(--tracking-display)}
+h2{font-size:var(--size-h2)}h3{font-size:var(--size-h3)}h4{font-size:var(--size-h4);font-family:var(--font-text);font-weight:var(--weight-medium)}
+p{margin:0 0 var(--space-2);max-width:var(--measure-prose)}
+a{color:var(--text-link);text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:color-mix(in oklab,var(--moss-700) 35%,transparent);transition:color var(--dur-quick) var(--ease-calm),text-decoration-color var(--dur-quick) var(--ease-calm)}
+a:hover{color:var(--text-link-hover);text-decoration-color:currentColor}
+::selection{background:var(--ember-200);color:var(--bark-900)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px}
+hr{border:0;border-top:1px solid var(--rule-hairline);margin:var(--space-6) 0}
+.eyebrow{font-family:var(--font-text);font-size:var(--size-eyebrow);letter-spacing:var(--tracking-eyebrow);text-transform:uppercase;color:var(--text-muted);font-weight:var(--weight-medium)}
+.lead{font-size:var(--size-lead);line-height:var(--leading-lead);color:var(--text-muted);max-width:var(--measure-lead)}

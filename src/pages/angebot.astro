@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Offer } from "../components/pages/Offer.jsx";
+---
+
+<BaseLayout
+  title="Coaching-Angebot | Lars Völkle — Systemischer Coach"
+  description="Coaching-Angebot: Neu anfangen nach Burnout, Führung, Coaching für Männer und Coaching auf Französisch oder Italienisch. Vor Ort in Wehingen oder online, 90–150 € je Sitzung."
+  path="/angebot"
+>
+  <Offer client:load />
+</BaseLayout>

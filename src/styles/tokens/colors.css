@@ -1,0 +1,22 @@
+:root{
+/* --- Bark: warm brown earth, the primary brand family --- */
+--bark-950:#1C1611;--bark-900:#2A211A;--bark-800:#3A2E23;--bark-700:#4A3A2C;--bark-600:#5C4835;--bark-500:#6E5540;--bark-400:#8C7259;--bark-300:#A8917A;--bark-200:#C8B8A4;--bark-100:#E3D7C8;--bark-50:#F3ECE1;
+/* --- Moss: forest green, the secondary brand family --- */
+--moss-950:#141C13;--moss-900:#1F2A1E;--moss-800:#293728;--moss-700:#35462F;--moss-600:#44573B;--moss-500:#55694A;--moss-400:#6F855F;--moss-300:#8FA47F;--moss-200:#B4C4A5;--moss-100:#DCE4D3;--moss-50:#EEF2E9;
+/* --- Ember: low-sun gold, the single accent --- */
+--ember-700:#8A5C1F;--ember-600:#A6742A;--ember-500:#C08A3E;--ember-400:#D6A45B;--ember-300:#E6C08A;--ember-200:#F0D9B4;--ember-100:#F7EAD4;
+/* --- Lake: cool muted teal, used sparingly for calm/info --- */
+--lake-700:#33565A;--lake-500:#4E7A7E;--lake-300:#8FB0B2;--lake-100:#DCE7E7;
+/* --- Neutrals: warm paper and stone --- */
+--paper:#FBF8F3;--paper-2:#F5F0E7;--sand:#EDE6DA;--stone-200:#DDD4C6;--stone-300:#C6BBAA;--stone-400:#A79C8B;--ink-600:#5A5348;--ink-800:#3A352E;--ink-900:#26221D;--white:#FFFFFF;
+/* --- Semantic surfaces --- */
+--surface-page:var(--paper);--surface-raised:var(--white);--surface-sunken:var(--paper-2);--surface-card:var(--white);--surface-muted:var(--sand);--surface-inverse:var(--moss-900);--surface-accent-soft:var(--moss-50);--surface-ember-soft:var(--ember-100);
+/* --- Semantic text --- */
+--text-body:var(--ink-800);--text-heading:var(--bark-900);--text-muted:var(--ink-600);--text-subtle:var(--stone-400);--text-inverse:var(--paper);--text-inverse-muted:var(--moss-200);--text-link:var(--moss-700);--text-link-hover:var(--bark-700);--text-accent:var(--ember-700);
+/* --- Semantic lines --- */
+--border-subtle:var(--stone-200);--border-default:var(--stone-300);--border-strong:var(--bark-300);--border-inverse:color-mix(in oklab,var(--moss-200) 30%,transparent);--rule-hairline:color-mix(in oklab,var(--bark-900) 12%,transparent);
+/* --- Interactive --- */
+--action-primary:var(--moss-700);--action-primary-hover:var(--moss-800);--action-primary-active:var(--moss-900);--action-secondary:var(--bark-600);--action-secondary-hover:var(--bark-700);--focus-ring:var(--ember-500);
+/* --- Feedback --- */
+--feedback-positive:var(--moss-600);--feedback-positive-soft:var(--moss-50);--feedback-caution:var(--ember-600);--feedback-caution-soft:var(--ember-100);--feedback-critical:#A24E38;--feedback-critical-soft:#F6E3DC;--feedback-info:var(--lake-500);--feedback-info-soft:var(--lake-100);
+}
