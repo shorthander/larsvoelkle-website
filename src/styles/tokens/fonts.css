@@ -1,5 +1,1 @@
-/* Webfonts served from Google Fonts CDN. No brand font files were provided —
-   Newsreader (display) and Asap (text) are the chosen faces, loaded remotely.
-   If licensed brand fonts exist, drop the binaries in assets/fonts/ and replace
-   these imports with local @font-face rules. */
-@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=Asap:ital,wdth,wght@0,75..125,400..600;1,75..125,400..500&display=swap");
+/* Privacy-friendly system font stacks: no font requests leave the website. */

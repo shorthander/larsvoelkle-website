@@ -16,15 +16,17 @@ Website für die Coaching-Praxis von Lars Völkle, umgesetzt aus dem gelieferten
 - **Astro** (statischer Output) für schnelle, SEO-freundliche Seiten — jede Route wird zu vorgerendertem HTML.
 - **React** nur dort als Insel (`client:load`) eingebunden, wo Interaktivität gebraucht wird: Header/Footer (Hover-States), Tabs (Angebot), Accordion (FAQ) und das Kontaktformular (Validierung, Bestätigungsdialog).
 - Design-Tokens 1:1 aus `tokens/*.css` übernommen (`src/styles/tokens/`), Komponenten 1:1 aus `components/*/*.jsx` (`src/components/`).
-- Fonts (Newsreader, Asap) und Icons (Lucide) laufen wie im Prototyp per CDN — siehe `tokens/fonts.css` und `components/core/Icon.jsx`.
+- Schriftarten nutzen datenschutzfreundliche System-Font-Stacks; die Icons werden lokal als Inline-SVGs gerendert. Beim Seitenaufruf entstehen dafür keine Anfragen an Drittanbieter.
 
 ## Bekannte Platzhalter
 
 - **Bilder**: alle `ImageFrame`-Slots sind Platzhalter (kein Foto-Material geliefert).
-- **Telefonnummer**: `07426 000 000` ist ein Platzhalter.
 - **Preise**: `90–150 €` sind Platzhalter aus dem Prototyp.
-- **Logo**: kein Logo geliefert — die Marke ist der Name in Newsreader (`Wordmark`).
-- **Impressum/Datenschutz**: Footer-Links sind Platzhalter (`#`) — Seiten existieren noch nicht.
+- **Logo**: kein Logo geliefert — die Marke ist der gesetzte Name (`Wordmark`).
+
+## Kontakt und Datenschutz
+
+Das Kontaktformular hat bewusst keinen serverseitigen Formulardienst. Nach der lokalen Validierung öffnet es eine vorbereitete E-Mail im E-Mail-Programm der besuchenden Person. Eingaben werden nicht über die Website übertragen oder gespeichert. Impressum und Datenschutzerklärung berücksichtigen das statische GitHub-Pages-Hosting und sind im Footer verlinkt.
 
 ## Anrede
 

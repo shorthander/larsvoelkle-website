@@ -68,12 +68,9 @@ export function SiteFooter() {
           >
             Kontakt
           </div>
-          <span style={{ display: "flex", gap: "var(--space-1)", alignItems: "center", color: "var(--paper)" }}>
-            <Icon name="phone" size={16} /> 07426 000 000
-          </span>
-          <span style={{ display: "flex", gap: "var(--space-1)", alignItems: "center", color: "var(--paper)" }}>
+          <a href="mailto:post@larsvoelkle.de" style={{ display: "flex", gap: "var(--space-1)", alignItems: "center", color: "var(--paper)" }}>
             <Icon name="mail" size={16} /> post@larsvoelkle.de
-          </span>
+          </a>
           <span style={{ display: "flex", gap: "var(--space-1)", alignItems: "center" }}>
             <Icon name="map-pin" size={16} /> Hintere Straße 18, 78564 Wehingen
           </span>
@@ -94,10 +91,10 @@ export function SiteFooter() {
       >
         <span>© 2026 Lars Völkle</span>
         <span style={{ display: "flex", gap: "var(--space-3)" }}>
-          <a href="#" style={{ color: "var(--moss-200)" }}>
+          <a href="/impressum" style={{ color: "var(--moss-200)" }}>
             Impressum
           </a>
-          <a href="#" style={{ color: "var(--moss-200)" }}>
+          <a href="/datenschutz" style={{ color: "var(--moss-200)" }}>
             Datenschutz
           </a>
         </span>

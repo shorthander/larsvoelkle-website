@@ -11,7 +11,7 @@ const ANGEBOTE = {
   "Neu anfangen": {
     lead: "Nach Burnout, Krankheit oder einem Schicksalsschlag zurück in deine Kraft.",
     preis: "90–150 € / 45 Min.",
-    punkte: ["Erstgespräch kostenfrei, 30 Minuten", "Sieben bis zehn Sitzungen à 45 Minuten", "Vor Ort in Wehingen oder online", "Auf Deutsch, Französisch oder Italienisch"],
+    punkte: ["Erstgespräch kostenfrei, 30 Minuten", "Individuell bis zu 12 Stunden; mindestens 4 Stunden empfohlen", "Vor Ort in Wehingen oder online", "Auf Deutsch, Französisch oder Italienisch"],
   },
   Führung: {
     lead: "Klare Entscheidungen, weniger Überlastung, nachhaltig wirksam führen.",
@@ -60,7 +60,8 @@ export function Offer() {
             <Card padding="lg" elevated>
               <Tag tone="ember">{tab}</Tag>
               <div style={{ fontFamily: "var(--font-display)", fontSize: "var(--size-h2)", color: "var(--text-heading)", margin: "var(--space-3) 0 var(--space-1)" }}>{a.preis}</div>
-              <p style={{ fontSize: "var(--size-small)", color: "var(--text-muted)" }}>Der Satz richtet sich nach Anlass, Umfang und deinen Möglichkeiten. Erstgespräch kostenfrei. Sagst du bis 24 Stunden vorher ab, ist es kostenfrei.</p>
+              <p style={{ fontSize: "var(--size-small)", color: "var(--text-muted)" }}>Der Satz richtet sich nach Anlass, Umfang und deinen Möglichkeiten. Das Erstgespräch ist kostenfrei.</p>
+              <p style={{ fontSize: "var(--size-small)", color: "var(--text-muted)" }}>Eine Absage ist bis 24 Stunden vor dem vereinbarten Termin kostenfrei. Bei späterer Absage oder Nichterscheinen behalte ich mir vor, den Termin in Rechnung zu stellen.</p>
               <Button fullWidth style={{ marginTop: "var(--space-3)" }} href="/kontakt">Termin anfragen</Button>
             </Card>
           </div>

@@ -96,7 +96,7 @@ export function Home() {
               {[
                 ["Erstgespräch", "30 Minuten, kostenfrei, unverbindlich — telefonisch oder per Video."],
                 ["Auftrag klären", "Woran merkst du, dass es sich gelohnt hat?"],
-                ["Arbeiten", "Sieben bis zehn Sitzungen à 45 Minuten, vor Ort oder online."],
+                ["Arbeiten", "Individuell bis zu 12 Stunden. Ich empfehle mindestens 4 Stunden — vor Ort oder online."],
                 ["Abschließen", "Wir schauen, was bleibt, und lassen los."],
               ].map(([t, d], i) => (
                 <li key={t} style={{ display: "flex", gap: "var(--space-3)", borderTop: "1px solid var(--rule-hairline)", paddingTop: "var(--space-3)" }}>
@@ -157,6 +157,23 @@ export function Home() {
         </div>
       </section>
 
+      <section style={{ background: "var(--surface-sunken)" }} className="sect">
+        <div className="wrap narrow">
+          <SectionHeading eyebrow="Wichtige Hinweise" title="Ein klarer und geschützter Rahmen" />
+          <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-3)", marginTop: "var(--space-5)" }}>
+            <Callout tone="info" title="Beratung, keine Psychotherapie">
+              Systemische Beratung ist keine Psychotherapie und ersetzt keine medizinische, psychotherapeutische oder psychiatrische Untersuchung oder Behandlung.
+            </Callout>
+            <Callout tone="calm" title="Für Erwachsene">
+              Mein Beratungsangebot richtet sich ausschließlich an volljährige Personen ab 18 Jahren.
+            </Callout>
+            <Callout tone="calm" title="Vertraulichkeit">
+              Vertrauen ist die Grundlage meiner Arbeit. Alles, was du mir anvertraust, behandle ich streng vertraulich. Ausnahmen gelten nur, wenn du mich ausdrücklich davon entbindest oder eine gesetzliche Verpflichtung besteht.
+            </Callout>
+          </div>
+        </div>
+      </section>
+
       <section className="sect" style={{ paddingTop: 0 }}>
         <div className="wrap narrow">
           <SectionHeading eyebrow="Häufige Fragen" title="Bevor du anrufst" />
@@ -170,12 +187,14 @@ export function Home() {
               { question: "Gibt es Termine online?", answer: "Ja. Online-Coaching per Video ist gleichwertig zum Termin vor Ort und funktioniert weltweit — praktisch bei Schichtarbeit, langer Anfahrt oder wenn du im Ausland bist." },
               { question: "Woher kommen die Menschen, die zu dir kommen?", answer: "Aus Wehingen und dem Heuberg, aus Tuttlingen, Spaichingen, Balingen und Rottweil — und online aus aller Welt." },
               { question: "Was heißt systemisch?", answer: "Ich schaue mit dir auf die Beziehungen, in denen du stehst — Familie, Team, Arbeit. Nicht die Person ist das Problem, sondern das Muster, das sich zwischen den Beteiligten hält." },
-              { question: "Ist das eine Therapie?", answer: "Nein. Coaching arbeitet an konkreten Fragen und Rollen. Wenn eine Therapie sinnvoller ist, sage ich das offen und vermittle weiter." },
+              { question: "Wie viele Stunden sind sinnvoll?", answer: "Der Umfang ist individuell und kann bis zu 12 Stunden betragen. Ich empfehle mindestens 4 Stunden, damit Veränderung nicht nur angestoßen, sondern auch gefestigt werden kann." },
+              { question: "Was gilt bei einer Terminabsage?", answer: "Bis 24 Stunden vor dem vereinbarten Termin kannst du kostenfrei absagen. Bei einer späteren Absage oder wenn du nicht erscheinst, behalte ich mir vor, den Termin in Rechnung zu stellen." },
+              { question: "Ist das eine Therapie?", answer: "Nein. Systemische Beratung ist keine Psychotherapie und ersetzt keine medizinische, psychotherapeutische oder psychiatrische Behandlung. Mein Angebot richtet sich ausschließlich an Erwachsene ab 18 Jahren." },
             ]}
           />
           <a href="/kontakt" style={{ textDecoration: "none", display: "block", marginTop: "var(--space-5)" }}>
             <Callout tone="calm" title="Vertraulich" style={{ cursor: "pointer" }}>
-              Alles, was du erzählst, bleibt im Raum. Ich unterliege der Schweigepflicht.
+              Alles, was du erzählst, behandle ich streng vertraulich — innerhalb der gesetzlichen Grenzen.
               <span style={{ display: "block", marginTop: "var(--space-15)", color: "var(--moss-700)", fontWeight: "var(--weight-medium)" }}>Zum Kontaktformular →</span>
             </Callout>
           </a>

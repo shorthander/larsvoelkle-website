@@ -46,7 +46,7 @@ export function About() {
             {[
               ["1976", "Geboren. Heute verheiratet und Vater von drei Kindern."],
               ["1993–1998", "Gastronomie — Ausbildung und Arbeit in der Hotellerie."],
-              ["1998–2020", "Metallbranche: Einrichter an den Maschinen, ab 2009 stellvertretender Gruppenleiter in der Produktion."],
+              ["1998–2020", "Metallbranche: Einrichter an den Maschinen, ab 2009 Gruppenleiter in der Produktion."],
               ["2009–2017", "Eigene Antipasti-Herstellung, Verkauf auf dem Wochenmarkt — parallel zur Arbeit in der Produktion."],
               ["seit 2020", "Führungskraft in der Metallbranche."],
               ["heute", "Systemischer Coach für Einzelne und Führungskräfte."],
