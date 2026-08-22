@@ -174,7 +174,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className="sect" style={{ paddingTop: 0 }}>
+      <section className="sect faq-section">
         <div className="wrap narrow">
           <SectionHeading eyebrow="Häufige Fragen" title="Bevor du anrufst" />
           <Accordion
