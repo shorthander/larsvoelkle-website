@@ -3,7 +3,11 @@ import { Wordmark } from "../core/Wordmark.jsx";
 import { Icon } from "../core/Icon.jsx";
 import { NAV } from "./SiteHeader.jsx";
 
-export function SiteFooter() {
+export function SiteFooter({ locale = "de" }) {
+  const isItalian = locale === "it";
+  const nav = isItalian
+    ? [["/it/", "Inizio"], ["/it/#argomenti", "Argomenti"], ["/it/#metodo", "Metodo"], ["/kontakt", "Contatti"]]
+    : NAV;
   return (
     <footer
       style={{
@@ -24,7 +28,7 @@ export function SiteFooter() {
               maxWidth: "36ch",
             }}
           >
-            Systemisches Coaching für Menschen im Umbruch und für Führungskräfte. In Wehingen und online — auf Deutsch, Französisch und Italienisch.
+            {isItalian ? "Coaching sistemico per persone in fase di cambiamento e per dirigenti. A Wehingen e online — in tedesco, francese e italiano." : "Systemisches Coaching für Menschen im Umbruch und für Führungskräfte. In Wehingen und online — auf Deutsch, Französisch und Italienisch."}
           </p>
           <p
             style={{
@@ -34,7 +38,7 @@ export function SiteFooter() {
               maxWidth: "40ch",
             }}
           >
-            Tuttlingen · Rottweil · Wehingen · Balingen · Spaichingen · online weltweit
+            Tuttlingen · Rottweil · Wehingen · Balingen · Spaichingen · {isItalian ? "online in tutto il mondo" : "online weltweit"}
           </p>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: "var(--space-1)" }}>
@@ -48,9 +52,9 @@ export function SiteFooter() {
               marginBottom: "var(--space-1)",
             }}
           >
-            Seiten
+            {isItalian ? "Pagine" : "Seiten"}
           </div>
-          {NAV.map(([href, label]) => (
+          {nav.map(([href, label]) => (
             <a key={href} href={href} style={{ color: "var(--paper)", fontSize: "var(--size-small)", textDecoration: "none" }}>
               {label}
             </a>
@@ -66,7 +70,7 @@ export function SiteFooter() {
               color: "var(--moss-300)",
             }}
           >
-            Kontakt
+            {isItalian ? "Contatti" : "Kontakt"}
           </div>
           <a href="mailto:post@larsvoelkle.de" style={{ display: "flex", gap: "var(--space-1)", alignItems: "center", color: "var(--paper)" }}>
             <Icon name="mail" size={16} /> post@larsvoelkle.de
@@ -92,10 +96,10 @@ export function SiteFooter() {
         <span>© 2026 Lars Völkle</span>
         <span style={{ display: "flex", gap: "var(--space-3)" }}>
           <a href="/impressum" style={{ color: "var(--moss-200)" }}>
-            Impressum
+            {isItalian ? "Note legali" : "Impressum"}
           </a>
           <a href="/datenschutz" style={{ color: "var(--moss-200)" }}>
-            Datenschutz
+            {isItalian ? "Informativa sulla privacy" : "Datenschutz"}
           </a>
         </span>
       </div>

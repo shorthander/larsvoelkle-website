@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { HomeIt } from "../../components/pages/HomeIt.jsx";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Quanto dura una seduta?", acceptedAnswer: { "@type": "Answer", text: "45 minuti. Per il primo colloquio dedichiamo 30 minuti, senza alcun costo." } },
+    { "@type": "Question", name: "Quanto costa un appuntamento?", acceptedAnswer: { "@type": "Answer", text: "Una seduta individuale di 45 minuti costa tra i 90 e i 150 €. Il primo colloquio è gratuito." } },
+    { "@type": "Question", name: "In quali lingue lavori?", acceptedAnswer: { "@type": "Answer", text: "Tedesco, francese e italiano — tutte e tre a livello madrelingua." } },
+    { "@type": "Question", name: "Gli appuntamenti sono disponibili online?", acceptedAnswer: { "@type": "Answer", text: "Sì. Il coaching online tramite video funziona in tutto il mondo." } },
+  ],
+};
+---
+
+<BaseLayout
+  title="Coaching sistemico a Wehingen e online | Lars Völkle"
+  description="Coaching sistemico a Wehingen, Tuttlingen, Rottweil, Balingen e online in tutto il mondo. In italiano, francese e tedesco a livello madrelingua. Primo colloquio gratuito."
+  path="/it/"
+  locale="it"
+  faqJsonLd={faqJsonLd}
+>
+  <HomeIt client:load />
+</BaseLayout>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Wordmark } from "../core/Wordmark.jsx";
 import { Button } from "../core/Button.jsx";
+import { Icon } from "../core/Icon.jsx";
 
 export const NAV = [
   ["/", "Start"],
@@ -9,7 +10,19 @@ export const NAV = [
   ["/kontakt", "Kontakt"],
 ];
 
-export function SiteHeader({ pathname = "/" }) {
+const LANGUAGES = [
+  { code: "DE", href: "/", label: "Deutsch" },
+  { code: "IT", href: "/it/", label: "Italiano" },
+];
+
+export function SiteHeader({ pathname = "/", locale = "de" }) {
+  const [menuOpen, setMenuOpen] = React.useState(false);
+  const isItalian = locale === "it";
+  const nav = isItalian
+    ? [["/it/", "Inizio"], ["/it/#argomenti", "Argomenti"], ["/it/#metodo", "Metodo"], ["/kontakt", "Contatti"]]
+    : NAV;
+  const contactLabel = isItalian ? "Primo colloquio" : "Erstgespräch";
+
   return (
     <header
       style={{
@@ -25,19 +38,18 @@ export function SiteHeader({ pathname = "/" }) {
         <a href="/" style={{ textDecoration: "none" }}>
           <Wordmark size="md" />
         </a>
-        <nav className="nav">
-          <span
-            className="lang"
-            style={{
-              fontFamily: "var(--font-text)",
-              fontSize: "var(--size-caption)",
-              color: "var(--text-muted)",
-              letterSpacing: "var(--tracking-eyebrow)",
-            }}
-          >
-            DE · FR · IT
-          </span>
-          {NAV.map(([href, label]) => {
+        <button className="menu-toggle" type="button" aria-label={menuOpen ? (isItalian ? "Chiudi navigazione" : "Navigation schließen") : (isItalian ? "Apri navigazione" : "Navigation öffnen")} aria-expanded={menuOpen} aria-controls="site-navigation" onClick={() => setMenuOpen((open) => !open)}>
+          <Icon name={menuOpen ? "close" : "menu"} size={22} />
+        </button>
+        <nav id="site-navigation" className={`nav ${menuOpen ? "nav-open" : ""}`}>
+          <div className="language-switcher" aria-label={isItalian ? "Seleziona la lingua" : "Sprache auswählen"}>
+            {LANGUAGES.map((language) => (
+              <a key={language.code} href={language.href} aria-current={locale === language.code.toLowerCase() ? "page" : undefined} onClick={() => setMenuOpen(false)}>
+                {language.code}
+              </a>
+            ))}
+          </div>
+          {nav.map(([href, label]) => {
             const active = pathname === href;
             return (
               <a
@@ -51,13 +63,14 @@ export function SiteHeader({ pathname = "/" }) {
                   borderBottom: `1px solid ${active ? "var(--moss-600)" : "transparent"}`,
                   paddingBottom: 2,
                 }}
+                onClick={() => setMenuOpen(false)}
               >
                 {label}
               </a>
             );
           })}
-          <Button size="sm" href="/kontakt">
-            Erstgespräch
+          <Button size="sm" href="/kontakt" onClick={() => setMenuOpen(false)}>
+            {contactLabel}
           </Button>
         </nav>
       </div>
