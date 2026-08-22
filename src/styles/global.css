@@ -46,9 +46,9 @@ body{background:var(--surface-page)}
 }
 @media(max-width:760px){
   .wrap{padding:0 var(--space-3)}
-  .hero{gap:var(--space-8);align-items:start;padding:var(--space-10) var(--space-4) var(--space-12)}
-  .hero .reveal{padding-top:var(--space-1)}
-  .faq-section{padding-top:var(--space-12)}
+  .hero{gap:var(--space-10);align-items:start;padding:var(--space-10) var(--space-3) var(--space-12)}
+  .seo-strip{padding:var(--space-4) var(--space-3) var(--space-5)}
+  .faq-section{padding-top:var(--space-16)}
   .hdr{height:64px;padding:0}
   .menu-toggle{display:inline-flex;align-items:center;justify-content:center}
   .nav{display:none;position:absolute;top:64px;left:0;right:0;z-index:21;padding:var(--space-3);background:var(--paper);border-bottom:1px solid var(--rule-hairline);box-shadow:var(--shadow-md);align-items:stretch;gap:var(--space-1)}
